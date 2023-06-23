@@ -11,7 +11,7 @@
 
 
         <ImageView
-            android:id="@+id/iv_rumah_sakit"
+            android:id="@+id/iv_rumah_bersama"
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:clipToOutline="true"
@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:maxLines="2"
-            android:text="Nama Rumah Sakit"
+            android:text="Nama Rumah Bersama"
             android:textSize="21dp"
             android:textStyle="bold" />
 

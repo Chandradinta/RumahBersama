@@ -13,7 +13,7 @@
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tambah data Rumah Sakit"
+        android:text="Tambah data Rumah Bersama"
         android:textSize="10pt"
         android:textStyle="bold"
         />
@@ -22,7 +22,7 @@
         android:id="@+id/et_nama"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Masukan nama Rumah Sakit"
+        android:hint="Masukan nama Rumah Bersama "
         />
 
 
@@ -30,28 +30,28 @@
         android:id="@+id/et_alamat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Masukan  alamat Rumah Sakit"
+        android:hint="Masukan  alamat Rumah Bersama"
         />
 
     <EditText
         android:id="@+id/et_telepon"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Masukan telepon Rumah Sakit"
+        android:hint="Masukan telepon Rumah Bersama"
         />
 
     <EditText
         android:id="@+id/et_foto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Masukan link foto Rumah Sakit"
+        android:hint="Masukan link foto Rumah Bersama"
         />
 
     <EditText
         android:id="@+id/et_koordinat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Masukan koordinat Rumah Sakit"
+        android:hint="Masukan koordinat Rumah Bersama"
         />
 
     <Button

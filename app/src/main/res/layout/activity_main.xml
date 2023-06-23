@@ -8,10 +8,10 @@
     tools:context=".Activity.MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_rumah_sakit"
+        android:id="@+id/rv_rumah_bersama"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/list_item_rumah_sakit"/>
+        tools:listitem="@layout/list_item_rumah_bersama"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_tambah_data"
@@ -24,7 +24,7 @@
         />
 
     <ProgressBar
-        android:id="@+id/pb_rumah_sakit"
+        android:id="@+id/pb_rumah_bersama"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"

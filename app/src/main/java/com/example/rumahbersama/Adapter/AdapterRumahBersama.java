@@ -8,6 +8,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
+import com.dwiki.rsplg.R;
+import com.example.rumahbersama.Activity.ModelRumahBersama;
 
 import java.util.List;
 
@@ -23,7 +28,7 @@ public class AdapterRumahBersama extends RecyclerView.Adapter<AdapterRumahBersam
     @NonNull
     @Override
     public HolderData onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_rumah_sakit, parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_rumah_bersama, parent,false);
         HolderData holder = new HolderData(view);
         return holder;
     }
@@ -40,7 +45,7 @@ public class AdapterRumahBersama extends RecyclerView.Adapter<AdapterRumahBersam
                 .load(MRS.getFoto())
                 .centerCrop()
                 .placeholder(R.mipmap.ic_launcher)
-                .into(holder.ivRumahBersama\);
+                .into(holder.ivRumahBersama);
 
 
     }
@@ -60,8 +65,7 @@ public class AdapterRumahBersama extends RecyclerView.Adapter<AdapterRumahBersam
             tvAlamat = itemView.findViewById(R.id.tv_alamat);
             tvTelepon = itemView.findViewById(R.id.tv_telepon);
             tvKoordinat = itemView.findViewById(R.id.tv_koordinat);
-            ivRumahBersama = itemView.findViewById(R.id.iv_rumah_sakit);
-
+            ivRumahBersama = itemView.findViewById(R.id.iv_rumah_bersama);
 
 
         }
