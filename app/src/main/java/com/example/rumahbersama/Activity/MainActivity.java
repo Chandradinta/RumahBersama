@@ -3,9 +3,11 @@ package com.example.rumahbersama.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -21,6 +23,7 @@ import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
     private RecyclerView rvRumahBersama;
@@ -36,8 +39,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        rvRumahBersama = findViewById(R.id.rv_rumah_sakit);
-        pbRumahBersama = findViewById(R.id.pb_rumah_sakit);
+        rvRumahBersama = findViewById(R.id.rv_rumah_bersama);
+        pbRumahBersama = findViewById(R.id.pb_rumah_bersama);
         fabTambahData = findViewById(R.id.fab_tambah_data);
 
         lmRumahBersama = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
@@ -63,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         APIRequestData API = RetroServer.konekRetrofit().create(APIRequestData.class);
         Call<ModelResponse> proses = API.ardRetrieve();
 
-        ((Call<?>) proses).enqueue(new Callback<ModelResponse>() {
+        proses.enqueue(new Callback<ModelResponse>() {
             @Override
             public void onResponse(Call<ModelResponse> call, Response<ModelResponse> response) {
                 int kode = response.body().getKode();
@@ -71,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
 
                 listRumahBersama = response.body().getData();
 
-                adRumahBersama = new RecyclerView.Adapter(MainActivity.this, listRumahBersama);
+                adRumahBersama = new AdapterRumahBersama(MainActivity.this, listRumahBersama);
                 rvRumahBersama.setAdapter(adRumahBersama);
                 adRumahBersama.notifyDataSetChanged();
 

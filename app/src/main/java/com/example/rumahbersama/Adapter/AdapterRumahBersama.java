@@ -25,6 +25,10 @@ public class AdapterRumahBersama extends RecyclerView.Adapter<AdapterRumahBersam
         this.listRumahBersama = listRumahBersama;
     }
 
+    public AdapterRumahBersama() {
+
+    }
+
     @NonNull
     @Override
     public HolderData onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
