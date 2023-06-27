@@ -16,7 +16,8 @@
             android:layout_height="250dp"
             android:clipToOutline="true"
             android:scaleType="centerCrop"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@mipmap/ic_launcher"
+            android:contentDescription="TODO" />
 
         <TextView
             android:id="@+id/tv_nama"
